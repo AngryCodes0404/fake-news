@@ -25,19 +25,10 @@ class Model(ABC):
     
     @abstractmethod
     def compute_metrics(self, eval_datapoints: List[Datapoint], split: Optional[str] = None) -> Dict:
-        """
-        Compute a set of model-specifc metrics on the provided set of datapoints.
-        :param eval_datapoints: Datapoints to compute metrics for
-        :param split: Data split on which metrics are being computed
-        :return: A dictionary mapping from the name of the metric to its value
-        """
+
         pass
     
     @abstractmethod
     def get_params(self) -> Dict:
-        """
-        Return the model-specific parameters such as number of hidden-units in the case
-        of a neural network or number of trees for a random forest
-        :return: Dictionary containing the model parameters
-        """
+
         pass
