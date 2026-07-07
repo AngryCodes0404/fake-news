@@ -86,6 +86,5 @@ class RandomForestModel(Model):
     
     def save(self, model_cache_path: str) -> None:
         LOGGER.info("Saving model to disk...")
-        # TODO (mihail): Save using joblib
         with open(model_cache_path, "wb") as f:
             pickle.dump(self.model, f)
